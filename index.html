@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Josefin Sans', sans-serif;
+
+      color: hsl(0, 6%, 24%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      max-width: 1200px;
+      width: 100%;
+      background-color: white;
+      overflow: hidden;
+    }
+
+    .page-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+
+    /* Left Section */
+    .left-section {
+      flex: 1;
+      background-image: url(images/bg-pattern-desktop.svg);
+      padding: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .logo {
+      width: 150px;
+      margin-bottom: 5rem;
+    }
+
+    h1 {
+
+      font-size: 65px;
+      color: hsl(0, 36%, 70%);
+      font-weight: 300;
+
+      letter-spacing: 10px;
+
+      line-height: 1.1;
+
+
+    }
+
+    h1 span {
+      color: black;
+      font-weight: 400;
+
+      display: block;
+      font-size: 3.5rem;
+      margin-bottom: 2 rem;
+    }
+
+    p {
+      color: hsl(0, 36%, 70%);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      max-width: 400px;
+    }
+
+    .form_container {
+      display: flex;
+      align-items: center;
+      position: relative;
+      width: 100%;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 1rem 5rem 1rem 1.5rem;
+      border-radius: 30px;
+      border: 1px solid hsl(0, 36%, 70%);
+      font-size: 1rem;
+      outline: none;
+      color: hsl(0, 6%, 24%);
+    }
+
+    input::placeholder {
+      color: hsl(0, 36%, 80%);
+    }
+
+    button {
+      position: absolute;
+      top: 1%;
+      bottom: 0%;
+      right: 0;
+
+      background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+      border: none;
+      border-radius: 30px;
+      padding: 15px 35px;
+      cursor: pointer;
+      box-shadow: 0px 10px 20px rgba(238, 140, 140, 0.4);
+    }
+
+
+    button img {
+      width: 12px;
+      height: auto;
+    }
+
+    small {
+      position: absolute;
+      bottom: -1.5rem;
+      left: 1rem;
+      color: red;
+      font-size: 0.85rem;
+    }
+
+    /* Right Section */
+    .right-section {
+      flex: 1;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column-reverse;
+      }
+
+      .left-section {
+        padding: 2rem;
+        align-items: center;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+        letter-spacing: 6px;
+      }
+
+      .logo {
+        margin-bottom: 2rem;
+      }
+
+      .form_container {
+        justify-content: center;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <div class="container">
+      <div class="left-section">
+        <div class="logo">
+          <img src="images/logo.svg" alt="logo">
+        </div>
+
+        <div class="text-content">
+          <h1>WE'RE <br><span>COMING SOON</span></h1>
+        </div>
+        <div class="text-content">
+          <p> Hello fellow shoppers! We're currently building our new fashion store.
+            Add your email below to stay up-to-date with announcements and our launch deals.</p>
+        </div>
+        <form class="form_container">
+          <input type="email" id="email" name="email" placeholder="Email Address">
+
+          <button type="submit"><img src="images/icon-arrow.svg" alt="icon-arrow"></button>
+          <small id="errorMsg"></small>
+
+        </form>
+      </div>
+      <div class="right-section">
+        <img src="images/hero-desktop.jpg" alt="hero-desktop" class="hero-img">
+      </div>
+    </div>
+
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Keerthana K</a>.
+      </p>
+    </footer>
+  </div>
+  <script>
+    const form = document.querySelector('.form_container');
+    const emailInput = document.getElementById('email');
+    const errorMsg = document.getElementById('errorMsg');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent form submission
+
+      const email = emailInput.value.trim();
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (email === '') {
+        errorMsg.textContent = 'Email is required';
+        emailInput.style.borderColor = 'red';
+      } else if (!emailPattern.test(email)) {
+        errorMsg.textContent = 'Please enter a valid email';
+        emailInput.style.borderColor = 'red';
+      } else {
+        errorMsg.textContent = '';
+        emailInput.style.borderColor = 'green';
+        alert('Thank you for subscribing!');
+        console.log('Valid email:', email);
+      }
+    });
+  </script>
+</body>
+
+</html>
